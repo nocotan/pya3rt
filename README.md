@@ -83,7 +83,7 @@ print(client.meat_score("meat1.jpeg", 1))
 # -*- coding: utf-8 -*-
 import pya3rt
 
-apikey = "mndQAOCHFawKjGpoDOIxjfDVBJ06P6xo"
+apikey = "{YOUR_API_KEY}"
 client = pya3rt.TalkClient(apikey)
 
 print(client.talk("おはよう"))

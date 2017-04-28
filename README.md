@@ -1,5 +1,7 @@
 # pya3rt
 
+[![MIT License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](LICENSE)  
+
 pya3rt is an API wrapper for A3RT in Python.
 
 ## A3RT

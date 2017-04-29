@@ -27,6 +27,8 @@ $ pip install pya3rt
 
 ### Text Suggest
 
+Text Suggest API is an API that automatically generates text and input assistance born using deep learning technology.
+
 ```python
 # -*- coding: utf-8 -*-
 import pya3rt
@@ -83,7 +85,7 @@ print(client.meat_score("meat1.jpeg", 1))
 # -*- coding: utf-8 -*-
 import pya3rt
 
-apikey = "mndQAOCHFawKjGpoDOIxjfDVBJ06P6xo"
+apikey = "{YOUR_API_KEY}"
 client = pya3rt.TalkClient(apikey)
 
 print(client.talk("おはよう"))

@@ -67,7 +67,7 @@ class TextClassificationClient(object):
         return TextClassification.dataset(endpoint, apikey)
 
     def model(self, dataset_id):
-        endpoint = self.ENDPOINTS['model']
+        endpoint = self.endpoint['model']
         apikey = self.apikey
         return TextClassification.model(endpoint, apikey, dataset_id)
 

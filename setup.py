@@ -14,7 +14,7 @@ with open('README.md') as f:
 setup(name='pya3rt',
       author='nocotan',
       url='https://github.com/nocotan/pya3rt',
-      version=1.0,
+      version=1.1,
       packages=find_packages(),
       license='MIT',
       description='A python wrapper for A3RT API',

@@ -7,7 +7,7 @@ from .image_influence import ImageInfluence
 from .listing import Listing
 
 ENDPOINTS = {
-    'text_suggest': 'https://api.a3rt.recruit-tech.co.jp/text_suggest/v1/predict',
+    'text_suggest': 'https://api.a3rt.recruit-tech.co.jp/text_suggest/v2/predict',
     'text_classification': {
         'classify': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/classify',
         'dataset': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/dataset',
@@ -32,7 +32,7 @@ ENDPOINTS = {
             'status_model': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/status_model',
         },
     },
-    'proofreading': 'https://api.a3rt.recruit-tech.co.jp/proofreading/v1/typo',
+    'proofreading': 'https://api.a3rt.recruit-tech.co.jp/proofreading/v2/typo',
     'talk': 'https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk',
 }
 

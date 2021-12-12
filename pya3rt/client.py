@@ -7,33 +7,22 @@ from .image_influence import ImageInfluence
 from .listing import Listing
 
 ENDPOINTS = {
-    'text_suggest': 'https://api.a3rt.recruit-tech.co.jp/text_suggest/v2/predict',
+    'text_suggest': 'https://api.a3rt.recruit.co.jp/text_suggest/v2/predict',
     'text_classification': {
-        'classify': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/classify',
-        'dataset': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/dataset',
-        'model': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/model',
-        'check_status': 'https://api.a3rt.recruit-tech.co.jp/text_classification/v1/check_status',
+        'classify': 'https://api.a3rt.recruit.co.jp/text_classification/v1/classify',
+        'dataset': 'https://api.a3rt.recruit.co.jp/text_classification/v1/dataset',
+        'model': 'https://api.a3rt.recruit.co.jp/text_classification/v1/model',
+        'check_status': 'https://api.a3rt.recruit.co.jp/text_classification/v1/check_status',
     },
     'listing': {
-        'get_upload_url': 'https://api.a3rt.recruit-tech.co.jp/listing/v1/get_upload_url',
-        'start_w2v': 'https://api.a3rt.recruit-tech.co.jp/listing/v1/start_w2v',
-        'status_w2v': 'https://api.a3rt.recruit-tech.co.jp/listing/v1/status_w2v',
-        'get_download_url': 'https://api.a3rt.recruit-tech.co.jp/listing/v1/get_download_url',
-        'cancel_w2v': 'https://api.a3rt.recruit-tech.co.jp/listing/v1/cancel_w2v',
+        'get_upload_url': 'https://api.a3rt.recruit.co.jp/listing/v1/get_upload_url',
+        'start_w2v': 'https://api.a3rt.recruit.co.jp/listing/v1/start_w2v',
+        'status_w2v': 'https://api.a3rt.recruit.co.jp/listing/v1/status_w2v',
+        'get_download_url': 'https://api.a3rt.recruit.co.jp/listing/v1/get_download_url',
+        'cancel_w2v': 'https://api.a3rt.recruit.co.jp/listing/v1/cancel_w2v',
     },
-    'image_influence': {
-        'scoring': {
-            'meat_score': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/meat_score',
-            'image_score': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/image_score',
-        },
-        'model': {
-            'get_upload_url': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/get_upload_url',
-            'order_model': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/order_model',
-            'status_model': 'https://api.a3rt.recruit-tech.co.jp/image_influence/v1/status_model',
-        },
-    },
-    'proofreading': 'https://api.a3rt.recruit-tech.co.jp/proofreading/v2/typo',
-    'talk': 'https://api.a3rt.recruit-tech.co.jp/talk/v1/smalltalk',
+    'proofreading': 'https://api.a3rt.recruit.co.jp/proofreading/v2/typo',
+    'talk': 'https://api.a3rt.recruit.co.jp/talk/v1/smalltalk',
 }
 
 
@@ -119,38 +108,6 @@ class ProofreadingClient(object):
         endpoint = self.endpoint
         apikey = self.apikey
         return Proofreading.request(endpoint, apikey, sentence, callback, sensitivity)
-
-
-class ImageInfluenceClient(object):
-
-    def __init__(self, apikey):
-        self.apikey = apikey
-        self.endpoint = ENDPOINTS['image_influence']
-
-    def meat_score(self, imagefile, predict):
-        endpoint = self.endpoint['scoring']['meat_score']
-        apikey = self.apikey
-        return ImageInfluence.meat_score(endpoint, apikey, imagefile, predict)
-
-    def image_score(self, imagefile, predict):
-        endpoint = self.endpoint['scoring']['image_score']
-        apikey = self.apikey
-        return ImageInfluence.image_score(endpoint, apikey, imagefile, predict)
-
-    def get_upload_url(self):
-        endpoint = self.endpoint['model']['get_upload_url']
-        apikey = self.apikey
-        return ImageInfluence.get_upload_url(endpoint, apikey)
-
-    def order_model(self):
-        endpoint = self.endpoint['model']['order_model']
-        apikey = self.apikey
-        return ImageInfluence.order_model(endpoint, apikey)
-
-    def status_model(self):
-        endpoint = self.endpoint['model']['status_model']
-        apikey = self.apikey
-        return ImageInfluence.status_model(endpoint, apikey)
 
 
 class TalkClient(object):

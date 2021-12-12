@@ -8,7 +8,7 @@ with open('requirements.txt') as f:
     requirements = f.read().splitlines()
 
 readme = ''
-with open('README.md') as f:
+with open('README.md', encoding='utf-8_sig') as f:
     readme = f.read()
 
 setup(name='pya3rt',
